@@ -875,7 +875,7 @@ _FX NTSTATUS KphValidateCertificate()
     LARGE_INTEGER expiration_date = { 0 };
 
     if (!type) // type is mandatory 
-        ;
+        Verify_CertInfo.type = eCertContributor;
     else if (_wcsicmp(type, L"CONTRIBUTOR") == 0)
         Verify_CertInfo.type = eCertContributor;
     else if (_wcsicmp(type, L"DEVELOPER") == 0)
